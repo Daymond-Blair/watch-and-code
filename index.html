@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+</head>
+
+<body>
+    <div style="text-align: center; max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <h1 style="">Lets Make A ToDo App!</h1>
+        <!-- less specific way - id's performing work on an element this leads to messier js by using getElementById
+            JUDGEMENT CALL - Adding event listeners this way can be useful if we need multiple listeners on an element
+            it is less specific and makes code more complex but it is an option to consider!!!!
+
+        <button id="displayTodosButton"
+            style="height: 50px; width: 100px; color: red; display: inline-block; border-radius: 50px;">Display
+            Todos</button>
+        <button id="toggleAllButton"
+            style="height: 50px; width: 100px; color: blue; display: inline-block; border-radius: 50px;">Toggle
+            All</button> -->
+
+        <!-- specific way - descriptive attributes show exactly what functionality each element holds
+        JUDGEMENT CALL - This method of adding event listeners is much cleaner, less complex and more specific; however,
+        we can only add one per element this way - another option to consider!!!!-->
+        <div style="display: inline-block; align-content: center;">
+            <!--
+            <button onclick="handlers.displayTodos()"
+                style="justify-content: center; align-self: flex-end; height: 50px; width: 100px; color: red; display: inline-block; border-radius: 50px;">Display
+                Todos</button>
+        -->
+            <button onclick="handlers.toggleAll()" style="justify-content: center; align-self: flex-end; height: 50px; width: 100px; color: blue; display: inline-block;
+                border-radius: 50px;">Toggle
+                All</button>
+        </div>
+        <div style="display: block;">
+            <button onclick="handlers.addTodo()"
+                style="height: 50px; width: 100px; color: purple; display: inline-block; border-radius: 50px;">Add
+                Todo
+            </button>
+            <input style="display: inline-block;" id="addTodoTextInput" type="text" placeholder='Enter text'>
+        </div>
+        <div style="display: block; width: 100%;">
+            <button onclick="handlers.changeTodo()"
+                style="height: 50px; width: 100px; color: orange; display: inline-block; border-radius: 50px;">Change
+                Todo</button>
+            <input style="display: inline-block;" id="changeTodoPositionInput" type="number"
+                placeholder="Enter position">
+            <input style="display: inline-block;" id="changeTodoTextInput" type="text" placeholder="Enter text">
+
+        </div>
+        <!-- <div style="display: block;">
+            <button onclick="handlers.deleteTodo()"
+                style="height: 50px; width: 100px; color:green; display: inline-block; border-radius: 50px;">Delete
+                Todo</button>
+            <input style="display: inline-block;" id="deleteTodoPositionInput" type="number"
+                placeholder="Enter position">
+            <input style="display: inline-block;" id="deleteTodoAmountInput" type="number"
+                placeholder="Enter delete amount">
+
+        </div> -->
+        <div style="display: block;">
+            <button onclick="handlers.toggleCompleted()" style="justify-content: center; align-self: flex-end; height: 50px; width: 100px; color:grey; display: inline-block;
+                border-radius: 50px;">Toggle
+                Completed</button>
+            <input style="display: inline-block;" id="toggleCompletedPositionInput" type="number"
+                placeholder="Enter position">
+        </div>
+
+    </div>
+    <ul style="text-align: center; list-style: inside;">
+    </ul>
+    <script src="/todo.js"></script>
+</body>
+
+</html>
