@@ -24,6 +24,7 @@
         <!-- specific way - descriptive attributes show exactly what functionality each element holds
         JUDGEMENT CALL - This method of adding event listeners is much cleaner, less complex and more specific; however,
         we can only add one per element this way - another option to consider!!!!-->
+        <!--TOGGLE ALL BUTTON-->
         <div style="display: inline-block; align-content: center;">
             <!--
             <button onclick="handlers.displayTodos()"
@@ -34,6 +35,7 @@
                 border-radius: 50px;">Toggle
                 All</button>
         </div>
+        <!--ADD TODO BUTTON-->
         <div style="display: block;">
             <button onclick="handlers.addTodo()"
                 style="height: 50px; width: 100px; color: purple; display: inline-block; border-radius: 50px;">Add
@@ -41,6 +43,7 @@
             </button>
             <input style="display: inline-block;" id="addTodoTextInput" type="text" placeholder='Enter text'>
         </div>
+        <!--CHANGE TODO BUTTON-->
         <div style="display: block; width: 100%;">
             <button onclick="handlers.changeTodo()"
                 style="height: 50px; width: 100px; color: orange; display: inline-block; border-radius: 50px;">Change
@@ -60,6 +63,7 @@
                 placeholder="Enter delete amount">
 
         </div> -->
+        <!--TOGGLE COMPLETED BUTTON-->
         <div style="display: block;">
             <button onclick="handlers.toggleCompleted()" style="justify-content: center; align-self: flex-end; height: 50px; width: 100px; color:grey; display: inline-block;
                 border-radius: 50px;">Toggle
